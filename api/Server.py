@@ -4,6 +4,8 @@
 from flask import Flask, request, jsonify
 import Auth
 
+import sqlite3
+
 class FlaskServer:
     def __init__(self):
         """Initializes the main flask server"
@@ -59,7 +61,12 @@ class FlaskServer:
             return "No authorization code received", 400
 
     # simualate message streaming
-    # def __stream_message(self):
+    def __stream_messages(self):
+        print("streaming messages")
+
+        # push notifications
+
+        # save on db
 
 
     # run!!
