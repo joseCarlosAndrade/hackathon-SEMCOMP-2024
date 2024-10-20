@@ -20,8 +20,6 @@ class AuthHandler:
     __REFRESH_KEY = ""
     __OWNER_USERNAME = ""
 
-    
-
     def __init__(self):
         load_dotenv()
 

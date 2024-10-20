@@ -20,9 +20,11 @@ class FlaskServer:
         self.__access_code = ""
         self.__auth_handler = Auth.AuthHandler()
 
+    # check server health
     def __root_callback(self):  
         return ":)", 200
 
+    # auth
     def __auth_callback(self):
         print("generating auth url")
 
@@ -33,8 +35,7 @@ class FlaskServer:
 
         return jsonify({f"status" : "ok" , "url" : f"{url}"})
 
-
-
+    # auth
     def __access_code_callback(self): # redirect callback - for development environment only
         # code param 
         print("getting access token")
@@ -57,6 +58,11 @@ class FlaskServer:
         else:
             return "No authorization code received", 400
 
+    # simualate message streaming
+    # def __stream_message(self):
+
+
+    # run!!
     def run(self):
         print("flask running on port 5000")
         self.app.run(host="0.0.0.0", port=5000)
