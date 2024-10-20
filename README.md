@@ -6,10 +6,24 @@ Project made for SEMCOMP27 Hackathon 2024.
 
 Our project involves bringing the enterprise and the users closer together by shortening their spaces. The main functionality of our application is an App for mobile that authenticates to the ChallengerMode public API to retreive and update data from the users account, without having to open the ChallengerMode website everytime.
 
+![alt text](app/dashboard.gif)
+
 The user may seek for next events and tournaments subscription, as well as receive push notifications from moderators. But how?
 Well, we have a discord bot that, when toggled by moderators, keeps track of all the messages they send, **broadcasting them instantly** to the intented users by push notifications on the mobile app.
 
-Besides, the user may control some of its actions through the notifications bar, like joining or declining a match **without having to leave the current game**. This is specially useful for mobile platform users, where switching tabs are not practical.
+![alt text](assets/discord.jpg)
+
+Example of broadcasting images.
+
+Besides, the user may control some of its actions through the notifications bar, like joining or declining a match **without having to leave the current game**. This is specially useful for mobile platform users, where switching tabs are not practical. See the images below:
+
+![alt text](app/notification2.gif)
+
+Example of notification with user interaction.
+
+![alt text](app/notification3.gif)
+
+Example of push notification.
 
 ## Requirements
 
