@@ -1,0 +1,8 @@
+curl --location --request POST 'https://challengermode.com/oauth/token' \
+    --header 'Content-Type: application/x-www-form-urlencoded' \
+    --data-urlencode 'grant_type=authorization_code' \
+    --data-urlencode 'code_verifier=gOxVr34xPuWTDQ_5FXA76kQQl7ZJGdyKGqeCQ09AlrE' \
+    --data-urlencode 'code=yugX4LaovdFcC2lDovawapAopV4NYNlyLsmxicvuDuA' \
+    --data-urlencode 'client_id=abd1b2ce-cbc2-4b2b-859f-08dce923e8ba' \
+    --data-urlencode 'client_secret=JUoQJTtDkhmGdkSGLNnFyoJQFbIdIruK' \
+    --data-urlencode 'redirect_uri=http://localhost:5000/callback'
