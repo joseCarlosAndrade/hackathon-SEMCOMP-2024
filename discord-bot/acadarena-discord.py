@@ -3,6 +3,7 @@ from discord.ext import commands
 import os
 from dotenv import load_dotenv
 from datetime import datetime
+import requests
 
 # Load token from .env file
 load_dotenv()
@@ -15,12 +16,23 @@ class AcadArenaDiscordBot(commands.Bot):
     def __init__(self, command_prefix, intents):
         super().__init__(command_prefix=command_prefix, intents=intents)
 
-    def notify_members(self, from_user, to_user, message):
+        self.api_url = "http://localhost:5000"
+
+    def notify_members(self, from_user, to_user, message, channel="not_set"):
         now = datetime.now()
         current_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
         print(f"NOTIFY MESSAGE FROM {from_user} TO {to_user}: {message}; at {current_time}")
-        
+        query_params = {
+            "from_user" : from_user,
+            # "to_user" : "",
+            "msg" : message,
+            "datetime" : current_time,
+            "match" : channel
+        }
+
+        response = requests.post(f"{self.api_url}/stream_message", params=query_params)
+        print(response.text)
     
     # on ready defines every time the bot is ready
     async def on_ready(self):

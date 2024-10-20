@@ -35,13 +35,14 @@ GET_LAST_24HOURS_MESSAGES = """SELECT * FROM "messages" WHERE "datetime" >= DATE
 
 class DataBaseHandler():
     """Handles data base handling, to decouple this logic from our api
+    note: it is presumed that all the users are already registered in the database
     """
     def __init__(self, path=""):
         if path == "":
             raise Exception("Empty path")
         
         try:
-            self.conn = sqlite3.connect('acad.db')
+            self.conn = sqlite3.connect('acad.db', check_same_thread=False)
         except Exception as err:
             print("could not connect to sqlite3 database, ", err)
             return False
@@ -100,7 +101,7 @@ class DataBaseHandler():
             print("final query: ", query)
             self.conn.execute(query)
             self.conn.commit()
-            
+
         # if to_user != None:
         #     to_user_id = FIND_USER_ID.format(from_user_id)
 
