@@ -110,6 +110,8 @@ class DataBaseHandler():
 
         rows = self.conn.execute(query)
 
+        return rows
+
         for row in rows:
             # retrieved: id  from_user_id  to_user_id  msg  datetime   match 
             print(row[1], row[2], row[3], row[4], row[5])
