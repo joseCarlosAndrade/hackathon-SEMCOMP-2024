@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "464761177582",
+    "project_id": "acadarena-semcomp",
+    "storage_bucket": "acadarena-semcomp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464761177582:android:edcffd18b5b8f58fc27aff",
+        "android_client_info": {
+          "package_name": "com.example.acadarena_semcomp_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK3oi_CvvyJZ1t1rtVk2SsRINhIk1_PT8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
