@@ -4,6 +4,10 @@ Project made for SEMCOMP27 Hackathon 2024.
 
 ## About!
 
+[Canvas link.](https://www.canva.com/design/DAGUH6cS0aM/GHZReRCcdXbaEeLVEMWNFw/edit?utm_content=DAGUH6cS0aM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+
+[Figma link.](https://www.figma.com/design/99xcQLm5VJTWJSJzSA51bx/AcadArenaApp?node-id=9-102&node-type=frame&t=toPgQGJVGcnGbEfa-0)
+
 Our project involves bringing the enterprise and the users closer together by shortening their spaces. The main functionality of our application is an App for mobile that authenticates to the ChallengerMode public API to retreive and update data from the users account, without having to open the ChallengerMode website everytime.
 
 ![alt text](app/dashboard.gif)
