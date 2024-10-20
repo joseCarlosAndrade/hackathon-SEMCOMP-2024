@@ -41,7 +41,7 @@ class DataBaseHandler():
             raise Exception("Empty path")
         
         try:
-            self.conn = sqlite3.connect('acad.db')
+            self.conn = sqlite3.connect('acad.db', check_same_thread=False)
         except Exception as err:
             print("could not connect to sqlite3 database, ", err)
             return False
@@ -109,12 +109,21 @@ class DataBaseHandler():
         query = GET_LAST_24HOURS_MESSAGES
 
         rows = self.conn.execute(query)
-
-        return rows
+        
+        messages = []
 
         for row in rows:
-            # retrieved: id  from_user_id  to_user_id  msg  datetime   match 
-            print(row[1], row[2], row[3], row[4], row[5])
+            message = {
+                "id": row[0],
+                "from_user_id": row[1],
+                "to_user_id": row[2],
+                "msg": row[3],
+                "datetime": row[4],
+                "match": row[5]
+            }
+            messages.append(message)
+
+        return messages
 
 if __name__ == "__main__":
     # test queries
