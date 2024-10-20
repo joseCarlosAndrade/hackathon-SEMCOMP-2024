@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "acadarena-semcomp",
+  "private_key_id": "3ca9dff0ae468c295f633f3f4a91240f6b8303c3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDmkf1h7FUzrIsY\nBofNkLvlTQbTXK34Ae9SM5K7vzB3KVnV2VLOb209E2mqlAEIJD/LnFUYe6o8zgIs\n7J9Ph6iRcpR59j3ZBwM6JxuEsOm7uwKi9Ud1I95mngMcbK4Y0HIfkuo4DX97NEwa\naWCaloP/xKQZC/uGumhTIzvCdcXvApBkrCtCyIgQoqVZyEhO6pBgDThz88SMmlNT\nNfqLCjZLGZbn+aiXkxwBLOdE1DtGJpszZeoL9q5el9joSUQ54UW9OO5F335R8QTf\nf4Vf80ftlCkNNR7piEXIFaYiN4jIrE5sy2V0v6BHWeRMLR4M2YP/WFl1LIBTtKx4\niraz0RN5AgMBAAECggEAI+2aH6ZSzSdfp0Hr6xmDWzg/o4jcvPlu4Dlpbc2y0NFb\nOR+mWm+c2eMKrfS7x8J/mbaFwLe9xRV5hk7lhjWGjAo1iQmuBSxQEZbiyrBB7lRg\n6qFbiK0rAdoxHulFJFhlfXZdqUKv24lrKxnCNA8siMWMp9so+bYAp/p6Bz5l4O0S\nxznLhrjtrxOtb08DmaLUB/OcfLqH3qISmsztrQxsiW0Vt1PAhqcpJB0tAtTD2LPs\nx98ef5i3uGOkvb+0V+UMkOiX3+Oa0PUaNWiy2rjaUy1hZxAhqJ3syQ0Nor6bOf9v\nJ5noiTqj4FvpmDF2Fov3VIdsytWlK1z/QGf+oVC+TwKBgQD5vF5k//WbBS7UIC77\nsBoQ8UChcjB2SrasFgyu9BXQVph6Dz832+vSHxw18MTabARdJe8Hk8udVllDOLrY\nfP80gDseVO7lQS1Ue/QOR7iR6sciHoB8yhRldC5/pXRg7F8EFgHI7vyGRfd8TUEe\nYJNSKoRzCMuQ42TwHRdzmyfV5wKBgQDsWo2aqbV5JoIyn5gQnKGR+elHF/svLVjt\nuJ3r02ZaCOcPrO07alx2ES9zzGaumPh++c8um8SWoVKBpYBOIC0uSgKm1HI8oAsb\nsESlMmqKMOq8KOeUJ1fDyt4ptI/mg3+JIB3VLnDyTCja6fFPb3UhJPsbYbOBZuPZ\nFWQjAWnfnwKBgQCkbnm8iKefRV9a/kHRKFdRVnfWlUgBaxox3mbFfyMpxQqqO4XF\ncsEn3aIGhhwnML4C0uo6k/6Z/vPRBfZIeqzSVagXRZbyTeLZ4K+GA4UsVmh9N5Yk\nFC4vyrqfA0LIWnoJR7AvK+QLSOA18OvyY2Y80I/a6iyWnpKkYpNBZCRrewKBgQDD\nFeM3u8iMXRquSkirvX0nDk5cXhD4WcfDP9Upp+4ddqexqpyNpDb5RSoTvK0shBro\nQ62c3PmhEzsUw9Rpp+ljAbe6mDRKkhdZHV8rs7d4pPO7p0+uW+L3OuWxKtZ0ACou\ntxGoupKDjBVUzDBfzrGxT+LsMPKHZrO+pQdoVWxcJQKBgC4jAutbHA1OVcJzHFV8\nbzHJ9vajH4pSZvtiYV9W5Gyre1orZlC73Ls5vIox+BKEZ2DH1ihq9oBiN3vE85AB\nGwy2VjMMqE/rR9pVLwh3b0xjktd+V7ZoZVnqP4t1HuV0C83porXmNooRG3RZmBSp\nb8qtuV99/FpYWOi/uUSM8P0s\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-hebs6@acadarena-semcomp.iam.gserviceaccount.com",
+  "client_id": "108073917357311070784",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-hebs6%40acadarena-semcomp.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
