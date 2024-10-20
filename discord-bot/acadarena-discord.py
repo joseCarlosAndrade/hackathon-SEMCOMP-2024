@@ -20,6 +20,7 @@ class AcadArenaDiscordBot(commands.Bot):
         current_time = now.strftime("%Y-%m-%d %H:%M:%S")
 
         print(f"NOTIFY MESSAGE FROM {from_user} TO {to_user}: {message}; at {current_time}")
+        
     
     # on ready defines every time the bot is ready
     async def on_ready(self):

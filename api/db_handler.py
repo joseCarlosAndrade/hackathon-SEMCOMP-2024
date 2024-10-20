@@ -92,7 +92,7 @@ class DataBaseHandler():
             rows = self.cursor.execute(query)
 
             for row in rows:
-                to_user_id = print("found user: " ,row[0])
+                to_user_id = print("found user: ", row[0])
         
         if to_user_id == 0:
             
@@ -100,6 +100,7 @@ class DataBaseHandler():
             print("final query: ", query)
             self.conn.execute(query)
             self.conn.commit()
+            
         # if to_user != None:
         #     to_user_id = FIND_USER_ID.format(from_user_id)
 

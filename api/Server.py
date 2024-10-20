@@ -5,6 +5,7 @@ from flask import Flask, request, jsonify
 import Auth
 
 import sqlite3
+import db_handler
 
 class FlaskServer:
     def __init__(self):
@@ -17,10 +18,14 @@ class FlaskServer:
         self.app.add_url_rule('/', view_func=self.__root_callback, methods=["GET"])
         self.app.add_url_rule('/auth', view_func=self.__auth_callback, methods=["GET"])
         self.app.add_url_rule('/callback', view_func=self.__access_code_callback, methods=["GET"])
+        self.app.add_url_rule('/stream_message', view_func=self.__stream_message, methods=["POST"])
 
         # secret access code and auth
         self.__access_code = ""
         self.__auth_handler = Auth.AuthHandler()
+
+        # db handler
+        self.__db_handler = db_handler.DataBaseHandler("acad.db")
 
     # check server health
     def __root_callback(self):  
@@ -61,13 +66,38 @@ class FlaskServer:
             return "No authorization code received", 400
 
     # simualate message streaming
-    def __stream_messages(self):
+    def __stream_message(self):
         print("streaming messages")
 
-        # push notifications
+        try:
+            from_user_name = request.args.get('from_user')
+            to_user_name = request.args.get('to_user', default=None)
+            msg = request.args.get('msg')
+            datetime = request.args.get('datetime')
+            match = request.args.get('match')
+
+            self.__db_handler.save_message(from_user_name, to_user_name, msg, datetime, match)
+
+            return jsonify({"status" : "ok"}), 200
+
+        except Exception as err:
+            return jsonify({"error" : err}), 400
+
+        # push notifications function
 
         # save on db
 
+    def __get_last_messages(self):
+        return
+    
+    def __get_all_participating_tournaments(self):
+        return
+    
+    def __get_space_tournaments(self):
+        return
+
+    def __get_all_user_information(self):
+        return
 
     # run!!
     def run(self):
