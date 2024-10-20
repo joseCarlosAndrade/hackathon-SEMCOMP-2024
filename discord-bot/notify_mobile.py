@@ -40,8 +40,8 @@ payload = {
     "message": {
         "token": device_token,
         "notification": {
-            "title": "CAASO X UFSCAR",
-            "body": "Não se esqueça de se prontificar para a partida!",
+            "title": "",
+            "body": "",
         },
         "data": {
             "confirmation": "false"
@@ -49,9 +49,10 @@ payload = {
     }
 }
 
-# Send the POST request to Firebase
-response = requests.post(url, headers=headers, data=json.dumps(payload))
+def send_notification(title, message):
+    payload["message"]["notification"]["title"] = title
+    payload["message"]["notification"]["body"] = message
+    response = requests.post(url, headers=headers, data=json.dumps(payload))
+    print("Status Code:", response.status_code)
+    print("Response:", response.text)
 
-# Print the response for debugging
-print("Status Code:", response.status_code)
-print("Response:", response.text)

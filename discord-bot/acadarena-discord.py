@@ -5,6 +5,8 @@ from dotenv import load_dotenv
 from datetime import datetime
 import requests
 
+from notify_mobile import send_notification
+
 # Load token from .env file
 load_dotenv()
 TOKEN = os.getenv('TOKEN')
@@ -30,6 +32,8 @@ class AcadArenaDiscordBot(commands.Bot):
             "datetime" : current_time,
             "match" : channel
         }
+
+        send_notification(f"{from_user} • Discord", message)
 
         response = requests.post(f"{self.api_url}/stream_message", params=query_params)
         print(response.text)
@@ -86,7 +90,7 @@ class AcadArenaDiscordBot(commands.Bot):
 # intents for permissions
 intents = discord.Intents.default()
 intents.members = True
-intents.message_content = True  # nnable message content intent
+intents.message_content = True  # enable message content intent
 
 
 bot = AcadArenaDiscordBot(command_prefix='!', intents=intents)
