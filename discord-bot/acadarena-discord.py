@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import os
 from dotenv import load_dotenv
+from datetime import datetime
 
 # Load token from .env file
 load_dotenv()
@@ -14,8 +15,11 @@ class AcadArenaDiscordBot(commands.Bot):
     def __init__(self, command_prefix, intents):
         super().__init__(command_prefix=command_prefix, intents=intents)
 
-        # mods_notify = {}
-        # player_and_roles = {}
+    def notify_members(self, from_user, to_user, message):
+        now = datetime.now()
+        current_time = now.strftime("%Y-%m-%d %H:%M:%S")
+
+        print(f"NOTIFY MESSAGE FROM {from_user} TO {to_user}: {message}; at {current_time}")
     
     # on ready defines every time the bot is ready
     async def on_ready(self):
@@ -34,11 +38,10 @@ class AcadArenaDiscordBot(commands.Bot):
                 for player, roles in players_and_roles.items() : # setting false notify as default for all mod members
                     print(player, roles)
                     for role in roles:
-
                         if role == "mod":
                             mods_notify[player] = False
 
-                            print("maps: ", mods_notify)
+                            # print("maps: ", mods_notify) # debug
                     
 
     # on message defines every message sent
@@ -49,8 +52,9 @@ class AcadArenaDiscordBot(commands.Bot):
 
         if str(message.author) in mods_notify:
             if mods_notify[str(message.author)]:
-                print(f"NOTIFY MESSAGE FROM {message.author}: {message.content}")
-                
+                # notify members
+                self.notify_members(str(message.author), "all", message.content)
+
 
         # Process commands if any
         await self.process_commands(message)
@@ -59,7 +63,7 @@ class AcadArenaDiscordBot(commands.Bot):
     async def get_all_players_and_roles(self, guild: discord.Guild):
         players_and_roles = {}
         for member in guild.members:
-            # Get a list of role names (excluding the @everyone role)
+            # get a list of role names (excluding the @everyone role)
             roles = [role.name for role in member.roles if role.name != "@everyone"]
             players_and_roles[member.name] = roles
 
@@ -94,11 +98,6 @@ async def toggleNotify(ctx):
 
     
 
-
-# bot.add_command(bot.hello)
-# bot.add_command(bot.toggleNotify)
-
-    
     
 #run
 bot.run(TOKEN)
